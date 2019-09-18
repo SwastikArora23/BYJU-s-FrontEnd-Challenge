@@ -1,0 +1,120 @@
+.container-fluid{
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.headerBar{
+  min-height: 48px;
+  line-height: 48px;
+  color: #fff;
+}
+.headerBar .headerBanner{
+  text-align: center;
+  font-weight: bold;
+}
+
+.jobElement{
+  padding: 20px;
+}
+
+.jobContent{
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+/* BOX SHADOW ABOVE */
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+.initLetter{
+  background-color: #aaa;
+  font-size: 2em;
+  font-weight: bold;
+  color: #888;
+}
+
+.jobTitle{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.companyName{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.location{
+  font-size: 18px;
+}
+
+.property{
+  font-size: 18px;
+}
+.property span{
+  font-weight: bold;
+}
+
+.dateThing{
+  font-size: 16px;
+}
+.dateThing span{
+  font-weight: bold;
+}
+
+.applyBtnRow{
+  margin-top: 10px;
+}
+
+.jdTitle, .jdValue{
+  font-size: 16px;
+}
+
+
+.applyBtnRow a{
+  width: 100%;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.searchDiv{
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+}
+.searchBar{
+  text-align: center;
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #333;
+}
+
+.locDiv{
+  line-height: 48px;
+  height: 48px;
+  text-align: center;
+}
+.location{
+  width: 90%;
+  height: 40px;
+  padding: 20px;
+}
+
+
+
+@media only screen and (max-width: 480px){
+  .jobElement{
+    margin-left: 2px;
+  }
+  .mobHide{
+    display: none;
+  }
+}

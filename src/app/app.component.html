@@ -1,0 +1,121 @@
+<div class="container-fluid">
+
+<div class="container-fluid bg-primary headerBar">
+<div class="row bg-primary">
+  <div class="col-xs-12 col-md-12 headerBanner">
+    Jobs
+  </div>
+
+  <div class="col-xs-12 col-md-10 searchDiv">
+    <!-- Search Bar |  -->
+    <input type="text" class="searchBar" placeholder="Search">
+  </div>
+  <div class="col-xs-12 col-md-2 locDiv">
+    <!-- Search Bar |  -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 522.462 522.462" style="enable-background:new 0 0 522.462 522.462;" xml:space="preserve" height="20px" width="20px" style="fill: #fff; color:#fff;">
+      <g>
+        <path d="M261.231,0C165.207,0,87.077,78.108,87.077,174.154c0,92.389,158.306,333.222,165.076,343.41   c2.003,3.026,5.421,4.898,9.078,4.898s7.053-1.872,9.078-4.898c6.748-10.188,165.076-251.021,165.076-343.41   C435.385,78.108,357.255,0,261.231,0z M261.231,250.346c-42.015,0-76.192-34.178-76.192-76.192s34.178-76.192,76.192-76.192   s76.192,34.178,76.192,76.192S303.245,250.346,261.231,250.346z"/>
+      </g><g> </g><g> </g><g> </g><g>
+      </g><g> </g><g> </g><g> </g><g>
+      </g><g> </g><g> </g><g> </g><g>
+      </g><g> </g><g> </g><g> </g>
+    </svg>
+    &nbsp;
+    <select name="experience" class="locatiion">
+      <option value="delhi">Delhi</option>
+      <option value="bangalore">Bangalore</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="gurugram">Gurugram</option>
+    </select>
+  </div>
+
+<!-- header end -->
+</div>
+</div>
+
+<div class="container">
+
+<div class="row jobWrapper">
+
+  <div class="col-12 jobElement" *ngFor="let job of jobs">
+    <div class="row jobContent">
+
+      <div class="col-12">
+        <div class="row">
+          <div class="col-xs-1 col-md-2 initLetter">
+              <!-- TODO: name first letter -->
+              <!-- {{job.title.substring(1)}} -->
+              &gt;
+            </div>
+            <div class="col-xs-9 col-md-10">
+              <!-- the rest content -->
+              <div class="row">
+                <div class="col-12 jobTitle">
+                  <!-- title -->
+                  {{job.title}}
+                </div>
+              </div>
+              <div class="row">
+                <!-- rest content -->
+                <div class="col-xs-12 col-md-6 companyName">{{job.companyname}}</div>
+                <div class="col-xs-12 col-md-6 location">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 522.462 522.462" style="enable-background:new 0 0 522.462 522.462;" xml:space="preserve" height="20px" width="20px">
+                      <g>
+                        <path d="M261.231,0C165.207,0,87.077,78.108,87.077,174.154c0,92.389,158.306,333.222,165.076,343.41   c2.003,3.026,5.421,4.898,9.078,4.898s7.053-1.872,9.078-4.898c6.748-10.188,165.076-251.021,165.076-343.41   C435.385,78.108,357.255,0,261.231,0z M261.231,250.346c-42.015,0-76.192-34.178-76.192-76.192s34.178-76.192,76.192-76.192   s76.192,34.178,76.192,76.192S303.245,250.346,261.231,250.346z"/>
+                      </g><g> </g><g> </g><g> </g><g>
+                      </g><g> </g><g> </g><g> </g><g>
+                      </g><g> </g><g> </g><g> </g><g>
+                      </g><g> </g><g> </g><g> </g>
+                    </svg>
+                    &nbsp;
+                  {{job.location}}
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="row">
+          <div class="col-2 d-xs-none d-sm-none d-md-block mobHide">&nbsp;</div>
+          <div class="col-10">
+            <div class="property">Experience: <span>{{job.experience}}</span></div>
+            <div class="property">Skills: <span>{{job.skills}}</span></div>
+            <div class="property">Type: <span>{{job.type}}</span></div>
+            <div class="property">Start Date: <span>{{job.startdate}}</span></div>
+            <!-- <div class="property">Start Date: <span>{{job.startdate}}</span></div> -->
+            <div class="row">
+              <!-- createdate end date -->
+              <div class="col-6 dateThing">Create Date: <span>{{job.created}}</span></div> <div class="col-6 dateThing">End Date: <span>{{job.enddate}}</span></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-md-2 jdTitle">Job Description:</div>
+              <div class="col-xs-12 col-md-10 jdValue">
+                {{job.jd}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="property" style="font-size: 0.6em !important;">Source: <span>{{job.source}}</span></div>
+
+        <!-- apply button down -->
+        <div class="row applyBtnRow">
+          <div class="col-12 bg-primary">
+            <a href={{job.applylink}} target="_blank" class="bg-primary">Apply</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
